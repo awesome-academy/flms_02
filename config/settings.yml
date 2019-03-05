@@ -1,0 +1,16 @@
+models:
+  author:
+    max_name: 150
+    max_phone: 11
+  book:
+    max_name: 150
+  category:
+    max_name: 150
+  publisher:
+    max_name: 150
+    max_phone: 11
+  user:
+    max_name: 150
+    max_phone: 11
+    max_email: 50
+    min_pass: 8
