@@ -1,5 +1,26 @@
 en:
+  app: "application"
+  title: "Sun* Library"
+  about: "About"
+  login: "Login"
+  library: "Library"
+  sun: "Sun Asterisk"
+  sun_library: "S U N* L I B R A R Y"
   #view
   layout:
-    application:
-      flms: "Flms02"
+    header:
+      make: "- We make IT awesome -"
+
+  static_pages:
+    home:
+      about: "About"
+      vision: "At Sun *, not only exists, we live to realize dreams,
+        strive to make better choices for everyone.
+        Standing at the intersection of technology, business and education,
+        we will bring positive change to the whole society.
+        Our vision is to build a world where everyone is free to
+        create great values ​​that have the power to change lives"
+      mission: "With the ideal of joining hands to build a bright future,
+        Sun*'s mission is to be with those who truly care about the value they bring,
+        making efforts to create essential products and services that make it so
+        world becomes better."
