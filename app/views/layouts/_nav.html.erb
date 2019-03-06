@@ -1,0 +1,15 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header page-scroll">
+      <%= link_to t("sun"), root_path, class: "navbar-brand" %>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden"><a href="#page-top"></a></li>
+        <li class="page-scroll"><a href="#library"><%= t "library" %></a></li>
+        <li class="page-scroll"><a href="#about"><%= t "about" %></a></li>
+        <li class="page-scroll"><%= link_to t("login"), "#" %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
