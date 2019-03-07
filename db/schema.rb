@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 20190305015542) do
   end
 
   create_table "books", force: :cascade do |t|
-    t.integer "author_id"
     t.integer "category_id"
     t.integer "publisher_id"
     t.string "name"
@@ -43,7 +42,6 @@ ActiveRecord::Schema.define(version: 20190305015542) do
     t.float "avg_rating", default: 0.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_books_on_author_id"
     t.index ["category_id"], name: "index_books_on_category_id"
     t.index ["publisher_id"], name: "index_books_on_publisher_id"
   end
@@ -57,7 +55,7 @@ ActiveRecord::Schema.define(version: 20190305015542) do
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
     t.integer "book_id"
-    t.string "content"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["book_id"], name: "index_comments_on_book_id"
@@ -106,7 +104,7 @@ ActiveRecord::Schema.define(version: 20190305015542) do
     t.integer "quantity"
     t.date "from_date"
     t.date "to_date"
-    t.integer "price", default: 0
+    t.integer "price"
     t.integer "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

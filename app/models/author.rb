@@ -1,6 +1,6 @@
 class Author < ApplicationRecord
   has_many :author_books
-  has_many :books, throught: :author_books
+  has_many :books, through: :author_books
   has_many :follows, dependent: :destroy
 
   validates :name, presence: true,
