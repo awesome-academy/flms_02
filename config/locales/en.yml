@@ -1,5 +1,9 @@
 en:
   app: "application"
+  book: "Book"
+  author: "Author"
+  publisher: "Publisher"
+  category: "Category"
   title: "Sun* Library"
   about: "About"
   login: "Login"
@@ -24,3 +28,10 @@ en:
         Sun*'s mission is to be with those who truly care about the value they bring,
         making efforts to create essential products and services that make it so
         world becomes better."
+
+  admin:
+    static_pages:
+      ad: "Admin"
+      online: "Online"
+      request: "Request"
+      user: "User"
