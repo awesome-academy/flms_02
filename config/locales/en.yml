@@ -2,14 +2,18 @@ en:
   app: "application"
   book: "Book"
   author: "Author"
+  id: "ID"
+  name: "Name"
   publisher: "Publisher"
   category: "Category"
   title: "Sun* Library"
   about: "About"
   login: "Login"
   library: "Library"
+  user: "User"
   sun: "Sun Asterisk"
   sun_library: "S U N* L I B R A R Y"
+
   #view
   layout:
     header:
@@ -30,8 +34,40 @@ en:
         world becomes better."
 
   admin:
+    create: "Create New"
     static_pages:
       ad: "Admin"
       online: "Online"
       request: "Request"
-      user: "User"
+      dashboard: "Dashboard"
+    categories:
+      category: "Category"
+      new: "New Category"
+      create: "Create Category"
+      edit: "Edit Category"
+      update: "Update Category"
+      you_sure: "Are you sure?"
+
+  #controller:
+  controller:
+    category:
+      destroy:
+        success: "Deleted successfully"
+        failed: "Deleted failed"
+      update:
+        success: "Updated successfully"
+      create:
+        success: "Create category success"
+        failed: "Create category failed"
+
+  #Shared
+  shared:
+    form: "The form contains %{error_list}"
+    error:
+      one: "1 error"
+      other: "%{count} errors"
+
+  activerecord:
+    attributes:
+      category:
+        name: "Name"

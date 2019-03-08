@@ -14,3 +14,5 @@ models:
     max_phone: 11
     max_email: 50
     min_pass: 8
+per_page:
+  categories: 5

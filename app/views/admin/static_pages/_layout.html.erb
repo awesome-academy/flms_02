@@ -1,4 +1,4 @@
-<div class="main row">
+<div class="main row admin">
   <aside class="col-md-3">
     <div class="sidebar">
       <div class="user-panel">
@@ -11,44 +11,51 @@
 
       <ul class="list-sidebar bg-defoult">
         <li>
-          <a href="" data-toggle="collapse" data-target="#dashboard" class="collapsed active">
+          <%= link_to admin_root_path do %>
+            <i class="fa fa-home"></i>
+            <span class="nav-label">
+              <%= t "admin.static_pages.dashboard" %>
+            </span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
             <i class="fa fa-check-square"></i>
             <span class="nav-label">
               <%= t "admin.static_pages.request" %>
             </span>
-          </a>
+          <% end %>
         </li>
         <li>
-          <a href="#">
+          <%= link_to admin_categories_path do %>
             <i class="fa fa-cube"></i>
-            <span class="nav-label"><%= t "admin.static_pages.category" %></span>
-          </a>
+            <span class="nav-label"><%= t "category" %></span>
+          <% end %>
         </li>
         <li>
-          <a href="#">
+          <%= link_to "#" do %>
             <i class="fa fa-book"></i>
-            <span class="nav-label"><%= t "admin.static_pages.book" %></span>
-          </a>
+            <span class="nav-label"><%= t "book" %></span>
+          <% end %>
         </li>
         <li>
-          <a href="#" data-toggle="collapse" data-target="#products" class="collapsed active" >
+          <%= link_to "#" do %>
             <i class="fa fa-user-circle"></i>
-            <span class="nav-label"><%= t "admin.static_pages.author" %></span>
-          </a>
+            <span class="nav-label"><%= t "author" %></span>
+          <% end %>
         </li>
         <li>
-          <a href="#">
+          <%= link_to "#" do %>
             <i class="fa fa-user"></i>
-            <span class="nav-label"><%= t "admin.static_pages.user" %></span>
-          </a>
+            <span class="nav-label"><%= t "user" %></span>
+          <% end %>
         </li>
         <li>
-          <a href="#" data-toggle="collapse" data-target="#tables" class="collapsed active" >
+          <%= link_to "#" do %>
             <i class="fa fa-table"></i>
-            <span class="nav-label"><%= t "admin.static_pages.publisher" %></span>
-          </a>
+            <span class="nav-label"><%= t "publisher" %></span>
+          <% end %>
         </li>
       </ul>
     </div>
   </aside>
-</div>

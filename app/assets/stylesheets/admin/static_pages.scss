@@ -9,14 +9,15 @@ $border-active: #dedede;
 a:hover{
   text-decoration: none;
 }
-/***    left menu ****/
 /***********************  TOP Bar ********************/
+.admin{
+  margin-top: 3em;
+}
 .sidebar{
   width: 220px;
   height: 30em;
   background-color: black;
   transition: all 0.5s ease-in-out;
-  margin-top: 3em;
 }
 .bg-defoult{
   background-color: $bg-defoult;
