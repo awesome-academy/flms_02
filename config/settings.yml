@@ -16,3 +16,4 @@ models:
     min_pass: 8
 per_page:
   categories: 5
+  authors: 5
