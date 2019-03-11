@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  before_save :downcase_email
+
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :requests, dependent: :destroy
@@ -21,4 +23,12 @@ class User < ApplicationRecord
   enum role: {user: 0, admin: 1}
 
   has_secure_password
+
+  scope :alphabet, ->{order name: :asc}
+
+  private
+
+  def downcase_email
+    self.email = email.downcase
+  end
 end
