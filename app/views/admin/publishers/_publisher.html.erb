@@ -1,0 +1,14 @@
+<tr>
+  <td align="center">
+    <%= link_to edit_admin_publisher_path(publisher), class: "btn btn-default" do %>
+      <em class="fa fa-pencil"></em>
+    <% end %>
+    <%= link_to admin_publisher_path(publisher), method: :delete,
+      class: "btn btn-danger", data: {confirm: t("admin.publishers.you_sure")} do %>
+      <em class="fa fa-trash"></em>
+    <% end %>
+  </td>
+  <td><%= publisher.name %></td>
+  <td><%= publisher.phone %></td>
+  <td><%= publisher.address %></td>
+</tr>

@@ -56,6 +56,13 @@ en:
       edit: "Edit Author"
       update: "Update Author"
       you_sure: "Are you sure?"
+    publishers:
+      publisher: "Publisher"
+      new: "New Publisher"
+      create: "Create Publisher"
+      edit: "Edit Publisher"
+      update: "Update Publisher"
+      you_sure: "Are you sure?"
 
   #controller:
   controller:
@@ -78,6 +85,16 @@ en:
         success: "Create author success"
         failed: "Create author failed"
       load_fail: "Author not found!"
+    publisher:
+      destroy:
+        success: "Deleted successfully"
+        failed: "Deleted failed"
+      update:
+        success: "Updated successfully"
+      create:
+        success: "Create publisher success"
+        failed: "Create publisher failed"
+      load_fail: "Publisher not found!"
 
   #Shared
   shared:
@@ -91,6 +108,10 @@ en:
       category:
         name: "Name"
       author:
+        name: "Name"
+        phone: "Phone"
+        address: "Address"
+      publisher:
         name: "Name"
         phone: "Phone"
         address: "Address"
