@@ -63,6 +63,17 @@ en:
       edit: "Edit Publisher"
       update: "Update Publisher"
       you_sure: "Are you sure?"
+    users:
+      user: "User"
+      new: "New User"
+      create: "Create User"
+      edit: "Edit User"
+      update: "Update User"
+      you_sure: "Are you sure?"
+      email: "Email"
+      phone: "Phone"
+      address: "Address"
+      role: "Role"
 
   #controller:
   controller:
@@ -95,6 +106,13 @@ en:
         success: "Create publisher success"
         failed: "Create publisher failed"
       load_fail: "Publisher not found!"
+    user:
+      update:
+        success: "Updated successfully"
+      create:
+        success: "Create user success"
+        failed: "Create user failed"
+      load_fail: "User not found"
 
   #Shared
   shared:
@@ -115,3 +133,10 @@ en:
         name: "Name"
         phone: "Phone"
         address: "Address"
+      user:
+        name: "Name"
+        email: "Email"
+        phone: "Phone"
+        address: "Address"
+        password: "Password"
+        password_confirmation: "Confirm password"
