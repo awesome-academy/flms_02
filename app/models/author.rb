@@ -8,4 +8,6 @@ class Author < ApplicationRecord
   validates :phone, presence: true,
     length: {maximum: Settings.models.author.max_phone}
   validates :address, presence: true
+
+  scope :alphabet, ->{order name: :asc}
 end

@@ -4,6 +4,8 @@ en:
   author: "Author"
   id: "ID"
   name: "Name"
+  phone: "Phone"
+  address: "Address"
   publisher: "Publisher"
   category: "Category"
   title: "Sun* Library"
@@ -47,6 +49,13 @@ en:
       edit: "Edit Category"
       update: "Update Category"
       you_sure: "Are you sure?"
+    authors:
+      author: "Author"
+      new: "New Author"
+      create: "Create Author"
+      edit: "Edit Author"
+      update: "Update Author"
+      you_sure: "Are you sure?"
 
   #controller:
   controller:
@@ -59,6 +68,16 @@ en:
       create:
         success: "Create category success"
         failed: "Create category failed"
+    author:
+      destroy:
+        success: "Deleted successfully"
+        failed: "Deleted failed"
+      update:
+        success: "Updated successfully"
+      create:
+        success: "Create author success"
+        failed: "Create author failed"
+      load_fail: "Author not found!"
 
   #Shared
   shared:
@@ -71,3 +90,7 @@ en:
     attributes:
       category:
         name: "Name"
+      author:
+        name: "Name"
+        phone: "Phone"
+        address: "Address"
