@@ -1,0 +1,12 @@
+<tr>
+  <td align="center">
+    <%= link_to edit_admin_category_path(category), class: "btn btn-default" do %>
+      <em class="fa fa-pencil"></em>
+    <% end %>
+    <%= link_to admin_category_path(category), method: :delete,class: "btn btn-danger",
+      data: {confirm: t("admin.categories.you_sure")} do %>
+        <em class="fa fa-trash"></em>
+    <% end %>
+  </td>
+  <td><%= category.name %></td>
+</tr>
