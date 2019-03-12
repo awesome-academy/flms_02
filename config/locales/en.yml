@@ -10,8 +10,13 @@ en:
   category: "Category"
   title: "Sun* Library"
   about: "About"
+  account: "Account"
+  profile: "Profile"
+  setting: "Setting"
   login: "Login"
+  logout: "Logout"
   signup: "Sign up"
+  signup_now: "Sign up now!"
   library: "Library"
   user: "User"
   sun: "Sun Asterisk"
@@ -114,6 +119,9 @@ en:
         success: "Create user success"
         failed: "Create user failed"
       load_fail: "User not found"
+    session:
+      login_fail: "Invalid email/password combination"
+      login_success: "Login success"
 
   #Shared
   shared:

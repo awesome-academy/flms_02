@@ -1,0 +1,20 @@
+<% provide :title, t("profile") %>
+<div class="container margin-top">
+  <div class="row">
+    <%= render "shared/flash" %>
+    <h3><b><%= @user.name %></b></h3>
+    <hr>
+    <div class="form-group">
+      <i class="glyphicon glyphicon-map-marker"></i>
+      <span class="nav-label"><%= @user.address %></span>
+    </div>
+    <div class="form-group">
+      <i class="glyphicon glyphicon-envelope"></i>
+      <span class="nav-label"><%= @user.email %></span>
+    </div>
+    <div class="form-group">
+      <i class="glyphicon glyphicon-phone"></i>
+      <span class="nav-label"><%= @user.phone %></span>
+    </div>
+  </div>
+</div>
