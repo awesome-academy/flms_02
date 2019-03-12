@@ -1,4 +1,4 @@
-class Admin::CategoriesController < ApplicationController
+class Admin::CategoriesController < AdminController
   before_action :load_category, only: %i(edit update destroy)
 
   def index

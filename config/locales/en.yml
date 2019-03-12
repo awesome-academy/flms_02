@@ -1,5 +1,7 @@
 en:
   app: "application"
+  admin_page: "Admin"
+  authorized: "You are not admin to view that page."
   book: "Book"
   author: "Author"
   edit: "Edit user"

@@ -1,4 +1,4 @@
-class Admin::PublishersController < ApplicationController
+class Admin::PublishersController < AdminController
   before_action :load_publisher, only: %i(edit update destroy)
 
   def index
