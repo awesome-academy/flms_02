@@ -2,6 +2,7 @@ en:
   app: "application"
   book: "Book"
   author: "Author"
+  edit: "Edit user"
   id: "ID"
   name: "Name"
   phone: "Phone"
@@ -12,6 +13,7 @@ en:
   about: "About"
   account: "Account"
   profile: "Profile"
+  please_login: "Please login"
   setting: "Setting"
   login: "Login"
   logout: "Logout"
@@ -119,6 +121,7 @@ en:
         success: "Create user success"
         failed: "Create user failed"
       load_fail: "User not found"
+      incorrect: "User incorrect"
     session:
       login_fail: "Invalid email/password combination"
       login_success: "Login success"

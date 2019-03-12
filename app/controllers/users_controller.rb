@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: :show
+  before_action :load_user, only: %i(show edit update)
+  before_action :correct_user, only: %i(show edit update)
+  before_action :logged_in_user, only: %i(show edit update)
 
   def new
     @user = User.new
@@ -19,6 +21,17 @@ class UsersController < ApplicationController
 
   def show; end
 
+  def edit; end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t "controller.user.update.success"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
   private
 
   def user_params
@@ -31,5 +44,12 @@ class UsersController < ApplicationController
     return if @user
     flash[:danger] = t "controller.user.load_fail"
     redirect_to login_path
+  end
+
+  def correct_user
+    @user = User.find_by id: params[:id]
+    return if current_user?(@user)
+    flash[:danger] = t "controller.user.incorrect"
+    redirect_to current_user
   end
 end
