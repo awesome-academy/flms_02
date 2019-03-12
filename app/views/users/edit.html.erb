@@ -1,0 +1,11 @@
+<% provide :title, t("edit") %>
+<% provide :url, user_path %>
+<% provide :button_text, t("edit") %>
+<div class="container margin-top">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2><%= t "edit" %></h2>
+      <%= render "form" %>
+    </div>
+  </div>
+</div>
