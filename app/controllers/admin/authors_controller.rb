@@ -1,4 +1,4 @@
-class Admin::AuthorsController < ApplicationController
+class Admin::AuthorsController < AdminController
   before_action :load_author, only: %i(edit update destroy)
 
   def index

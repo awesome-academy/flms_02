@@ -19,3 +19,6 @@ per_page:
   authors: 5
   publishers: 5
   users: 5
+role:
+  admin: "admin"
+  user: "user"
