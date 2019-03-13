@@ -21,7 +21,5 @@ per_page:
   authors: 5
   publishers: 5
   users: 5
-  book: 5
-role:
-  admin: "admin"
-  user: "user"
+  books: 5
+  book: 8

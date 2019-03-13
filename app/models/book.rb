@@ -10,7 +10,7 @@ class Book < ApplicationRecord
   has_many :author_books, dependent: :destroy
   has_many :authors, through: :author_books
 
-  scope :newest, ->{order :created_at}
+  scope :newest, ->{order id: :desc}
 
   accepts_nested_attributes_for :author_books
 

@@ -1,0 +1,26 @@
+<div class="nav-side-menu">
+  <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  <div class="menu-list">
+    <ul id="menu-content" class="menu-content collapse out">
+      <li data-toggle="collapse" data-target="#categories" class="collapsed">
+        <a href="#"><i class="fa fa-cube"></i><%= t "category" %><span class="arrow"></span></a>
+      </li>
+      <ul class="sub-menu collapse" id="categories">
+        <li><%= t "category" %></li>
+      </ul>
+      <li data-toggle="collapse" data-target="#authors" class="collapsed">
+        <a href="#"><i class="fa fa-user-circle"></i><%= t "author" %><span class="arrow"></span></a>
+      </li>
+      <ul class="sub-menu collapse" id="authors">
+        <li><%= t "author" %></li>
+      </ul>
+      <li data-toggle="collapse" data-target="#publishers" class="collapsed">
+        <a href="#"><i class="fa fa-table"></i><%= t "publisher" %>
+        <span class="arrow"></span></a>
+      </li>
+      <ul class="sub-menu collapse" id="publishers">
+        <li><%= t "publisher" %></li>
+      </ul>
+    </ul>
+  </div>
+</div>
