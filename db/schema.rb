@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20190305015542) do
     t.string "name"
     t.text "content"
     t.integer "num_of_pages"
-    t.date "year"
+    t.integer "year"
     t.integer "quantity"
     t.integer "price"
     t.string "image"

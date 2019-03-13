@@ -1,0 +1,59 @@
+<%= form_for [:admin, @book] do |f| %>
+  <%= render "shared/error_messages", object: @book%>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :category, class: "control-label" %>
+    <%= f.select :category_id, select_category, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :publisher, class: "control-label" %>
+    <%= f.select :publisher_id, select_publisher, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.fields_for :author_books do |ff| %>
+      <div class="form-group">
+        <%= ff.label :author, class: "control-label" %>
+        <%= ff.select :author_id, select_author, class: "form-control" %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :num_of_pages %>
+    <%= f.number_field :num_of_pages, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :year %>
+    <%= f.select :year, (Time.zone.now.year - Settings.models.book.year_max)..
+      (Time.zone.now.year +  Settings.models.book.year_min) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :price %>
+    <%= f.number_field :price, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_field :content, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :image, class: "control-label" %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+  <br>
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
