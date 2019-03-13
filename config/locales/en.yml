@@ -84,6 +84,22 @@ en:
       phone: "Phone"
       address: "Address"
       role: "Role"
+    books:
+      category: "Category"
+      author: "Author"
+      publisher: "Publisher"
+      year: "Year"
+      num_of_page: "Num of page"
+      quantity: "Quantity"
+      price: "Price"
+      content: "Content"
+      img: "Image"
+      book: "Book"
+      new: "New Book"
+      create: "Create Book"
+      edit: "Edit Book"
+      update: "Update Book"
+      you_sure: "Are you sure?"
 
   #controller:
   controller:
@@ -127,6 +143,16 @@ en:
     session:
       login_fail: "Invalid email/password combination"
       login_success: "Login success"
+    book:
+      destroy:
+        success: "Deleted successfully"
+        failed: "Deleted failed"
+      update:
+        success: "Updated successfully"
+      create:
+        success: "Create book success"
+        failed: "Create book failed"
+      load_fail: "Book not found!"
 
   #Shared
   shared:
@@ -154,3 +180,14 @@ en:
         address: "Address"
         password: "Password"
         password_confirmation: "Confirm password"
+      book:
+        name: "Name"
+        category: "Category"
+        publisher: "Publisher"
+        author: "Author"
+        num_of_pages: "Num of page"
+        year: "Year"
+        quantity: "Quantity"
+        price: "Price"
+        content: "Content"
+        image: "Image"

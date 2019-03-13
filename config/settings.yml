@@ -4,6 +4,8 @@ models:
     max_phone: 11
   book:
     max_name: 150
+    year_max: 100
+    year_min: 1
   category:
     max_name: 150
   publisher:
@@ -19,6 +21,7 @@ per_page:
   authors: 5
   publishers: 5
   users: 5
+  book: 5
 role:
   admin: "admin"
   user: "user"

@@ -6,7 +6,7 @@ class CreateBooks < ActiveRecord::Migration[5.1]
       t.string :name
       t.text :content
       t.integer :num_of_pages
-      t.date :year
+      t.integer :year
       t.integer :quantity
       t.integer :price
       t.string :image

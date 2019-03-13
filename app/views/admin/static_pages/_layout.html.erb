@@ -3,7 +3,7 @@
     <div class="sidebar">
       <div class="user-panel">
         <div class="info">
-          <p><%= t "admin.static_pages.ad" %></p>
+          <p><%= current_user.name %></p>
           <i class="fa fa-circle text-success"></i>
           <%= t "admin.static_pages.online" %>
         </div>
@@ -33,7 +33,7 @@
           <% end %>
         </li>
         <li>
-          <%= link_to "#" do %>
+          <%= link_to admin_books_path do %>
             <i class="fa fa-book"></i>
             <span class="nav-label"><%= t "book" %></span>
           <% end %>
