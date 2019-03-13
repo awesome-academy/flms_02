@@ -10,10 +10,6 @@ class Book < ApplicationRecord
   has_many :author_books, dependent: :destroy
   has_many :authors, through: :author_books
 
-  scope :newest, ->{order id: :desc}
-
-  accepts_nested_attributes_for :author_books
-
   validates :name, presence: true,
     length: {maximum: Settings.models.book.max_name}
   validates :num_of_pages, presence: true, numericality: {only_integer: true}
@@ -21,6 +17,13 @@ class Book < ApplicationRecord
   validates :content, presence: true
   validates :quantity, presence: true, numericality: {only_integer: true}
   validates :price, presence: true, numericality: {only_integer: true}
+
+  scope :newest, ->{order id: :desc}
+
+  accepts_nested_attributes_for :author_books
+
+  delegate :name, to: :category, prefix: :category
+  delegate :name, to: :publisher, prefix: :publisher
 
   def writers
     authors.map(&:name).join(", ")
