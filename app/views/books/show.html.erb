@@ -1,0 +1,43 @@
+<% provide :title, @book.name %>
+<div class="margin-top">
+  <div class="card">
+    <div class="container-fluid">
+      <div class="wrapper row">
+        <div class="preview col-md-6">
+          <div class="preview-pic tab-content">
+            <%= image_tag @book.image_url.to_s, class: "active tab-pane" %>
+          </div>
+        </div>
+        <div class="details col-md-6">
+          <h3 class="product-title"><%= @book.name %></h3>
+          <p><b><%= t "admin.books.type" %> </b><%= @book.category_name %></p>
+          <p><b><%= t "admin.books.pages" %> </b><%= @book.num_of_pages %></p>
+          <p><b><%= t "admin.books.writers" %> </b><%= @book.writers %></p>
+          <p><b><%= t "admin.books.publisher" %> </b><%= @book.publisher_name %></p>
+          <p><b><%= t "admin.books.publishing_year" %> </b><%= @book.year %></p>
+          <p><b><%= t "admin.books.introduce" %> </b><%= @book.content %></p>
+          <h4 class="price"><%= t "admin.books.current_price" %><span> <%= @book.price %></span></h4>
+          <div class="rating">
+            <div class="stars">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+          <p>
+            <button class="btn btn-danger" type="button"><span class="fa fa-heart"></span></button>
+            <strong> <%= @book.likes.size %></strong>
+          </p>
+          <i><%= @book.comments.size %> <%= t "admin.books.reviews" %></i><hr>
+          <div class="action">
+            <button class="add-to-cart btn btn-success" type="button">
+              <%= t "admin.books.borrow" %>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

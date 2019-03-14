@@ -1,3 +1,5 @@
+$a-bg: #eee;
+$e-color: #ff9f1a;
 $d-color: #909090;
 $b-color: #2e86de;
 $c-color: #999;
@@ -7,11 +9,11 @@ $sub-menu-bg: #181c20;
 $sub-menu-border: #23282e;
 $active: #4f5b69;
 $border-left: #d19b3d;
-$bg-color: #2e353d;
+$bg-color-a: #2e353d;
 
 .nav-side-menu{
   overflow: auto;
-  background-color: $bg-color;
+  background-color: $bg-color-a;
   width: 100%;
   color: white;
 }
@@ -70,7 +72,7 @@ $bg-color: #2e353d;
 }
 .nav-side-menu li{
   padding-left: 0px;
-  border-left: 3px solid $bg-color;
+  border-left: 3px solid $bg-color-a;
   border-bottom: 1px solid $sub-menu-border;
 }
 .nav-side-menu li a{
@@ -245,5 +247,114 @@ $bg-color: #2e353d;
 @media only screen and (max-width:990px){
   .product-grid6{
     margin-bottom:30px;
+  }
+}
+
+/*************SHOW************/
+.preview{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@media screen and (max-width: 996px){
+  .preview{
+    margin-bottom: 20px;
+  }
+}
+
+.preview-pic{
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.tab-content{
+  overflow: hidden;
+}
+.tab-content img{
+  width: 90%;
+  height: 450px;
+  object-fit: cover;
+  -webkit-animation-name: opacity;
+  animation-name: opacity;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+}
+.card{
+  margin-top: 50px;
+  background: $a-bg;
+  padding: 3em;
+  line-height: 1.5em;
+}
+@media screen and (min-width: 997px){
+  .wrapper{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.details{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.product-title, .price{
+  text-transform: UPPERCASE;
+  font-weight: bold;
+}
+.checked, .price span{
+  color: $e-color;
+}
+.product-title, .rating, .product-description, .price{
+  margin-bottom: 15px;
+}
+.product-title{
+  margin-top: 0;
+}
+.add-to-cart{
+  background: $e-color;
+  padding: 1.2em 1.5em;
+  border: none;
+  text-transform: UPPERCASE;
+  font-weight: bold;
+  color: white;
+  -webkit-transition: background .3s ease;
+  transition: background .3s ease;
+}
+@-webkit-keyframes opacity{
+  0%{
+    opacity: 0;
+    -webkit-transform: scale(3);
+    transform: scale(3);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes opacity{
+  0%{
+    opacity: 0;
+    -webkit-transform: scale(3);
+    transform: scale(3);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }

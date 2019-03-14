@@ -100,6 +100,15 @@ en:
       edit: "Edit Book"
       update: "Update Book"
       you_sure: "Are you sure?"
+      type: "Category:"
+      pages: "Number of pages:"
+      writers: "Writers:"
+      publisher: "Publisher:"
+      publishing_year: "Publishing year:"
+      reviews: "reviews"
+      current_price: "current price:"
+      introduce: "Introduce:"
+      borrow: "borrow"
 
   #controller:
   controller:
