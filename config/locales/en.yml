@@ -3,6 +3,9 @@ en:
   admin_page: "Admin"
   authorized: "You are not admin to view that page."
   book: "Book"
+  borrow: "Borrow"
+  like: "Like"
+  confirm: "Confirm"
   author: "Author"
   edit: "Edit user"
   id: "ID"
@@ -11,6 +14,11 @@ en:
   address: "Address"
   publisher: "Publisher"
   category: "Category"
+  quantity: "Quantity"
+  from_date: "From"
+  to_date: "To"
+  status: "Status"
+  price: "Price"
   title: "Sun* Library"
   about: "About"
   account: "Account"
@@ -24,6 +32,8 @@ en:
   library: "Library"
   user: "User"
   sun: "Sun Asterisk"
+  view: "View"
+  invalid_date: "must be after the from date"
   sun_library: "S U N* L I B R A R Y"
 
   #view
@@ -112,6 +122,9 @@ en:
 
   #controller:
   controller:
+    request:
+      success: "Borrow successfully"
+      fail: "Borrow fail"
     category:
       destroy:
         success: "Deleted successfully"
@@ -200,3 +213,13 @@ en:
         price: "Price"
         content: "Content"
         image: "Image"
+      request:
+        quantity: "Quantity"
+        from_date: "From date"
+        to_date: "To date"
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%d/%m/%Y"
+  product_price: "$%{price}"

@@ -1,0 +1,11 @@
+<tr>
+  <td><%= link_to request.book_name, book_path(request.book) %></td>
+  <td><%= request.book.category_name %></td>
+  <td><%= request.book.writers %></td>
+  <td><%= request.book.publisher_name %></td>
+  <td><%= request.quantity %></td>
+  <td><%= l request.from_date, format: :long %></td>
+  <td><%= l request.to_date, format: :long %></td>
+  <td><%= t "product_price", price:request.price %></td>
+  <td><%= request.status %></td>
+</tr>
