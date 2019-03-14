@@ -23,4 +23,6 @@ per_page:
   users: 5
   books: 5
   book: 8
-unit_price: 0.2
+  requests: 5
+unit_price: 0.1
+unit_day: 1

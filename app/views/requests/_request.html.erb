@@ -6,6 +6,6 @@
   <td><%= request.quantity %></td>
   <td><%= l request.from_date, format: :long %></td>
   <td><%= l request.to_date, format: :long %></td>
-  <td><%= t "product_price", price:request.price %></td>
-  <td><%= request.status %></td>
+  <td><%= t "product_price", price: request.price %></td>
+  <td><%= t("request_status.#{request.status}") %></td>
 </tr>
