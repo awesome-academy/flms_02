@@ -28,4 +28,8 @@ class Book < ApplicationRecord
   def writers
     authors.map(&:name).join(", ")
   end
+
+  def comments_newest
+    comments.newest
+  end
 end

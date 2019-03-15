@@ -11,6 +11,9 @@ en:
   borrow: "Borrow"
   category: "Category"
   confirm: "Confirm"
+  comment: "Comment"
+  comments: "Comments"
+  delete: "Delete"
   edit: "Edit user"
   from_date: "From"
   id: "ID"
@@ -194,6 +197,14 @@ en:
         success: "You have disliked this book"
         failed: "Unlike failed"
       load_fail: "Like not found!"
+    comment:
+      create:
+        success: "You commented this book"
+        failed: "Comment failed"
+      destroy:
+        success: "You have deleted this comment"
+        failed: "Delete failed"
+      load_fail: "Comment not found!"
 
   #Shared
   shared:
