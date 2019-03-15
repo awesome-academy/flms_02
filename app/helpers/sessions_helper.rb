@@ -24,4 +24,8 @@ module SessionsHelper
   def requests_newest
     current_user.requests.newest
   end
+
+  def like? book
+    current_user.likes.find_by(book_id: book.id).present? ? true : false
+  end
 end

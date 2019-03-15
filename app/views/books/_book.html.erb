@@ -18,8 +18,14 @@
         <% end %>
       </li>
       <li>
-        <%= link_to "#", "data-tip": t("like") do %>
-          <i class="fa fa-heart"></i>
+        <% if logged_in? %>
+          <%= link_to book_path(book), "data-tip": like?(book) ? t("unlike") : t("like") do %>
+            <i class="fa <%= like?(book) ? "fa-thumbs-down" : "fa-thumbs-up" %>"></i>
+          <% end %>
+        <% else %>
+          <%= link_to login_path, "data-tip": t("like") do %>
+            <i class="fa fa-thumbs-up"></i>
+          <% end %>
         <% end %>
       </li>
     </ul>

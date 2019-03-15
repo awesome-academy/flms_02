@@ -2,6 +2,7 @@
 <div class="margin-top">
   <div class="card">
     <div class="container-fluid">
+      <%= render "shared/flash" %>
       <div class="wrapper row">
         <div class="preview col-md-6">
           <div class="preview-pic tab-content">
@@ -29,13 +30,26 @@
             </div>
           </div>
           <p>
-            <button class="btn btn-danger" type="button"><span class="fa fa-heart"></span></button>
-            <strong> <%= @book.likes.size %></strong>
+            <% if logged_in? %>
+              <% if like? @book %>
+                <%= link_to like_path(book_id: @book.id), method: :delete,
+                  class: "btn btn-danger", data: {confirm: t("you_sure")} do %>
+                  <%= t "unlike" %>
+                <% end %>
+              <% else %>
+                <%= render "likes/like" %>
+              <% end %>
+            <% else %>
+              <%= link_to login_path do %>
+                <%= render "likes/like" %>
+              <% end %>
+            <% end %>
+            <i><b><%= @book.likes.count %></b> <%= t "likes" %></i>
           </p>
-          <i><%= @book.comments.size %> <%= t "admin.books.reviews" %></i><hr>
+          <i><b><%= @book.comments.size %></b> <%= t "admin.books.reviews" %></i><hr>
         </div>
         <div class="col-md-3">
-            <%= render "requests/form" %>
+          <%= render "requests/form" %>
         </div>
       </div>
     </div>
