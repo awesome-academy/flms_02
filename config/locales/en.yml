@@ -33,6 +33,9 @@ en:
   user: "User"
   sun: "Sun Asterisk"
   view: "View"
+  approve: "Approve"
+  reject: "Reject"
+  save: "Save"
   invalid_date: "must be after the from date"
   sun_library: "S U N* L I B R A R Y"
 
@@ -69,6 +72,8 @@ en:
       edit: "Edit Category"
       update: "Update Category"
       you_sure: "Are you sure?"
+    requests:
+      request: "Request"
     authors:
       author: "Author"
       new: "New Author"
@@ -125,6 +130,9 @@ en:
     request:
       success: "Borrow successfully"
       fail: "Borrow fail"
+      load_fail: "Request not found!"
+      update:
+        success: "Updated successfully"
     category:
       destroy:
         success: "Deleted successfully"
@@ -223,3 +231,7 @@ en:
       short: "%b %d"
       long: "%d/%m/%Y"
   product_price: "$%{price}"
+  request_status:
+    not_approved: "Processing"
+    approved: "Approved"
+    reject: "Reject"

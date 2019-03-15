@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :load_book, only: :show
+  before_action :load_book, :load_request, only: :show
 
   def index
     @books = Book.newest.paginate page: params[:page],
@@ -15,5 +15,9 @@ class BooksController < ApplicationController
     return if @book
     flash[:danger] = t "controller.book.load_fail"
     redirect_to books_path
+  end
+
+  def load_request
+    @request = @book.requests.new
   end
 end

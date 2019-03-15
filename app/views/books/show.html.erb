@@ -8,7 +8,7 @@
             <%= image_tag @book.image_url.to_s, class: "active tab-pane" %>
           </div>
         </div>
-        <div class="details col-md-6">
+        <div class="details col-md-3">
           <h3 class="product-title"><%= @book.name %></h3>
           <p><b><%= t "admin.books.type" %> </b><%= @book.category_name %></p>
           <p><b><%= t "admin.books.pages" %> </b><%= @book.num_of_pages %></p>
@@ -17,7 +17,7 @@
           <p><b><%= t "admin.books.publishing_year" %> </b><%= @book.year %></p>
           <p><b><%= t "admin.books.introduce" %> </b><%= @book.content %></p>
           <h4 class="price"><%= t "admin.books.current_price" %>
-            <span> <%= t "product_price", price:@book.price %></span>
+            <span> <%= t "product_price", price: @book.price %></span>
           </h4>
           <div class="rating">
             <div class="stars">
@@ -33,13 +33,9 @@
             <strong> <%= @book.likes.size %></strong>
           </p>
           <i><%= @book.comments.size %> <%= t "admin.books.reviews" %></i><hr>
-          <div class="action">
-            <%= link_to request_path(@book) do %>
-              <button class="add-to-cart btn btn-success" type="button">
-                <%= t "admin.books.borrow" %>
-              </button>
-            <% end %>
-          </div>
+        </div>
+        <div class="col-md-3">
+            <%= render "requests/form" %>
         </div>
       </div>
     </div>
