@@ -7,18 +7,26 @@
     </div>
     <div class="product-content">
       <h3 class="title"><a href="#"><%= book.name %></a></h3>
-      <div class="price"><%= book.price %></div>
+      <div class="price"><%= t "product_price", price:book.price %></div>
       <div><%= book.writers %></div>
       <div><%= book.avg_rating %></div>
     </div>
     <ul class="social">
       <li>
-        <%= link_to book_path(book), "data-tip": "View" do %>
+        <%= link_to book_path(book), "data-tip": t("view") do %>
           <i class="fa fa-eye"></i>
         <% end %>
       </li>
-      <li><a href="" data-tip="Like"><i class="fa fa-heart"></i></a></li>
-      <li><a href="" data-tip="Borrow"><i class="fa fa-shopping-bag"></i></a></li>
+      <li>
+        <%= link_to "#", "data-tip": t("like") do %>
+          <i class="fa fa-heart"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to request_path(book), "data-tip": t("borrow") do %>
+          <i class="fa fa-shopping-bag"></i>
+        <% end %>
+      </li>
     </ul>
   </div>
 </div>

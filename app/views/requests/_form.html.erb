@@ -1,0 +1,25 @@
+<%= form_for @request do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.hidden_field :book_id, value: @request.book.id %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
+  <div class="form-group">
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :from_date %>
+    <%= f.date_field :from_date, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :to_date %>
+    <%= f.date_field :to_date, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit t("confirm"), class: "btn btn-primary" %>
+  </div>
+<% end %>

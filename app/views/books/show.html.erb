@@ -16,7 +16,9 @@
           <p><b><%= t "admin.books.publisher" %> </b><%= @book.publisher_name %></p>
           <p><b><%= t "admin.books.publishing_year" %> </b><%= @book.year %></p>
           <p><b><%= t "admin.books.introduce" %> </b><%= @book.content %></p>
-          <h4 class="price"><%= t "admin.books.current_price" %><span> <%= @book.price %></span></h4>
+          <h4 class="price"><%= t "admin.books.current_price" %>
+            <span> <%= t "product_price", price:@book.price %></span>
+          </h4>
           <div class="rating">
             <div class="stars">
               <span class="fa fa-star checked"></span>
@@ -32,9 +34,11 @@
           </p>
           <i><%= @book.comments.size %> <%= t "admin.books.reviews" %></i><hr>
           <div class="action">
-            <button class="add-to-cart btn btn-success" type="button">
-              <%= t "admin.books.borrow" %>
-            </button>
+            <%= link_to request_path(@book) do %>
+              <button class="add-to-cart btn btn-success" type="button">
+                <%= t "admin.books.borrow" %>
+              </button>
+            <% end %>
           </div>
         </div>
       </div>

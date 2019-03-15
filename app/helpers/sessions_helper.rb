@@ -20,4 +20,8 @@ module SessionsHelper
   def current_user? user
     user == current_user
   end
+
+  def requests_newest
+    current_user.requests.newest
+  end
 end

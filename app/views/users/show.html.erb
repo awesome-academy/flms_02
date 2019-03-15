@@ -2,19 +2,41 @@
 <div class="container margin-top">
   <div class="row">
     <%= render "shared/flash" %>
-    <h3><b><%= @user.name %></b></h3>
-    <hr>
-    <div class="form-group">
-      <i class="glyphicon glyphicon-map-marker"></i>
-      <span class="nav-label"><%= @user.address %></span>
-    </div>
-    <div class="form-group">
-      <i class="glyphicon glyphicon-envelope"></i>
-      <span class="nav-label"><%= @user.email %></span>
-    </div>
-    <div class="form-group">
-      <i class="glyphicon glyphicon-phone"></i>
-      <span class="nav-label"><%= @user.phone %></span>
-    </div>
+    <h3><b><%= @user.name %></b></h3><hr>
   </div>
+  <div class="row">
+    <div class="col-md-2">
+      <div class="form-group">
+        <i class="glyphicon glyphicon-map-marker"></i>
+        <span class="nav-label"><%= @user.address %></span>
+      </div>
+      <div class="form-group">
+        <i class="glyphicon glyphicon-envelope"></i>
+        <span class="nav-label"><%= @user.email %></span>
+      </div>
+      <div class="form-group">
+        <i class="glyphicon glyphicon-phone"></i>
+        <span class="nav-label"><%= @user.phone %></span>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <table class="table table-striped table-bordered table-list">
+        <thead>
+          <tr>
+            <th><%= t "book" %></th>
+            <th><%= t "category" %></th>
+            <th><%= t "author" %></th>
+            <th><%= t "publisher" %></th>
+            <th><%= t "quantity" %></th>
+            <th><%= t "from_date" %></th>
+            <th><%= t "to_date" %></th>
+            <th><%= t "price" %></th>
+            <th><%= t "status" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render requests_newest %>
+        </tbody>
+      </table>
+    </div>
 </div>
