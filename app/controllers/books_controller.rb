@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :load_book, :build_comment, :build_like, :build_request, only: :show
+  before_action :load_book, :build_rating, :build_comment, :build_like, :build_request, only: :show
 
   def index
     @books = Book.newest.paginate page: params[:page],
@@ -27,5 +27,9 @@ class BooksController < ApplicationController
 
   def build_comment
     @comment = @book.comments.new
+  end
+
+  def build_rating
+    @rating = @book.ratings.new
   end
 end

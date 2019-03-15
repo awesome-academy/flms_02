@@ -9,7 +9,13 @@
       <h3 class="title"><a href="#"><%= book.name %></a></h3>
       <div class="price"><%= t "product_price", price: book.price %></div>
       <div><%= book.writers %></div>
-      <div><%= book.avg_rating %></div>
+      <div class="rating">
+        <div class="stars">
+          <% book.avg_rating.to_i.times do  %>
+            <span class="fa fa-star checked"></span>
+          <% end %>
+        </div>
+      </div>
     </div>
     <ul class="social">
       <li>

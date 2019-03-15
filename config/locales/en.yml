@@ -30,11 +30,11 @@ en:
   phone: "Phone"
   publisher: "Publisher"
   price: "Price"
-  title: "Sun* Library"
   please_login: "Please login"
   processing: "Processing"
   profile: "Profile"
   quantity: "Quantity"
+  rate: "Rate"
   reject: "Reject"
   save: "Save"
   setting: "Setting"
@@ -44,12 +44,14 @@ en:
   sun_library: "S U N* L I B R A R Y"
   user: "User"
   sun: "Sun Asterisk"
+  sun_library: "S U N* L I B R A R Y"
   title: "Sun* Library"
   to_date: "To"
   unlike: "Unlike"
   user: "User"
   users: "Users"
   view: "View"
+  your_rate: "Your rating:"
   you_sure: "Are you sure?"
 
   #view
@@ -212,6 +214,13 @@ en:
         success: "You have deleted this comment"
         failed: "Delete failed"
       load_fail: "Comment not found!"
+    rating:
+      create:
+        success: "You rated this book"
+        failed: "Rated failed"
+      load_fail: "Rate not found!"
+      update:
+        success: "Updated rating successfully"
 
   #Shared
   shared:
