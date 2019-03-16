@@ -32,4 +32,24 @@ module SessionsHelper
   def comment_of_user? comment
     current_user.comments.find_by(id: comment.id).present?
   end
+
+  def book_amount
+    Book.all.size
+  end
+
+  def author_amount
+    Author.all.size
+  end
+
+  def user_amount
+    User.all.size
+  end
+
+  def processing_amount
+    Request.not_approved.size
+  end
+
+  def select_role
+    User.roles.keys.map {|role| [t("user_role.#{role}"), role]}
+  end
 end
