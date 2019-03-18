@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   resources :books
   resources :requests
   resources :likes
+  resources :comments
 end

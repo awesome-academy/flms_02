@@ -46,11 +46,16 @@
             <% end %>
             <i><b><%= @book.likes.count %></b> <%= t "likes" %></i>
           </p>
-          <i><b><%= @book.comments.size %></b> <%= t "admin.books.reviews" %></i><hr>
+          <i><b><%= @book.comments.count %></b> <%= t "admin.books.reviews" %></i><hr>
         </div>
         <div class="col-md-3">
           <%= render "requests/form" %>
         </div>
+      </div>
+      <div class="container row">
+        <h2><%= t "comments" %></h2>
+        <div class="col-md-7"><%= render "comments/form" %></div>
+        <div class="col-md-7"><%= render @book.comments_newest %></div>
       </div>
     </div>
   </div>

@@ -11,6 +11,19 @@ $active: #4f5b69;
 $border-left: #d19b3d;
 $bg-color-a: #2e353d;
 
+.cmt{
+  margin-bottom: 1em;
+  font-size: 14px;
+  border-bottom: 1px solid gray;
+  .name{
+    color: blue;
+    font-weight: bold;
+  }
+  .date{
+    font-size: 12px;
+  }
+}
+
 .nav-side-menu{
   overflow: auto;
   background-color: $bg-color-a;

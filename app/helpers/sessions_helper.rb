@@ -26,6 +26,10 @@ module SessionsHelper
   end
 
   def like? book
-    current_user.likes.find_by(book_id: book.id).present? ? true : false
+    current_user.likes.find_by(book_id: book.id).present?
+  end
+
+  def comment_of_user? comment
+    current_user.comments.find_by(id: comment.id).present?
   end
 end
