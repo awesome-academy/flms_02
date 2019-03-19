@@ -1,0 +1,11 @@
+<%= form_for @rating do |f| %>
+  <%= f.hidden_field :book_id, value: @book.id %>
+
+  <%= f.radio_button :number_rating, 1 %>
+  <%= f.radio_button :number_rating, 2 %>
+  <%= f.radio_button :number_rating, 3 %>
+  <%= f.radio_button :number_rating, 4 %>
+  <%= f.radio_button :number_rating, 5 %>
+
+  <%= f.submit t("rate"), class: "btn btn-success" %>
+<% end %>

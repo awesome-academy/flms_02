@@ -52,4 +52,12 @@ module SessionsHelper
   def select_role
     User.roles.keys.map {|role| [t("user_role.#{role}"), role]}
   end
+
+  def rating? book
+    current_user.ratings.find_by(book_id: book.id).present?
+  end
+
+  def your_rating book
+    current_user.ratings.find_by(book_id: book.id).number_rating
+  end
 end

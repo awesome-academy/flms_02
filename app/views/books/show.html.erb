@@ -22,12 +22,15 @@
           </h4>
           <div class="rating">
             <div class="stars">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
+              <% @book.avg_rating.to_i.times do  %>
+                <span class="fa fa-star checked"></span>
+              <% end %>
+              <span><%= @book.avg_rating %></span>
             </div>
+            <div><%= render "ratings/form" %></div>
+            <% if logged_in? && rating?(@book) %>
+              <div><b><%= t "your_rate" %></b> <%= your_rating @book %></div>
+            <% end %>
           </div>
           <p>
             <% if logged_in? %>

@@ -3,12 +3,12 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root "static_pages#index"
-    resources :categories
-    resources :authors
-    resources :publishers
-    resources :users
+    resources :categories, except: :show
+    resources :authors, except: :show
+    resources :publishers, except: :show
+    resources :users, except: %i(show destroy)
     resources :books
-    resources :requests
+    resources :requests, only: %i(index update)
   end
 
   get "/signup", to: "users#new"
@@ -18,9 +18,10 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
-  resources :users
-  resources :books
-  resources :requests
-  resources :likes
-  resources :comments
+  resources :users, except: %i(index destroy)
+  resources :books, only: %i(index show)
+  resources :requests, only: :create
+  resources :likes, only: %i(create destroy)
+  resources :comments, only: %i(create destroy)
+  resources :ratings, only: :create
 end

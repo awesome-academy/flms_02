@@ -29,6 +29,10 @@ class Book < ApplicationRecord
     authors.map(&:name).join(", ")
   end
 
+  def update_avg_rating
+    update_attribute :avg_rating, ratings.sum(:number_rating)/(ratings.count)
+  end
+
   def comments_newest
     comments.newest
   end
