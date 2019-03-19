@@ -3,7 +3,7 @@ class Author < ApplicationRecord
   has_many :books, through: :author_books
   has_many :follows, dependent: :destroy
 
-  validates :name, presence: true,
+  validates :name, presence: true, uniqueness: {case_sensitive: false},
     length: {maximum: Settings.models.author.max_name}
   validates :phone, presence: true,
     length: {maximum: Settings.models.author.max_phone}

@@ -10,7 +10,7 @@ class Book < ApplicationRecord
   has_many :author_books, dependent: :destroy
   has_many :authors, through: :author_books
 
-  validates :name, presence: true,
+  validates :name, presence: true, uniqueness: {case_sensitive: false},
     length: {maximum: Settings.models.book.max_name}
   validates :num_of_pages, presence: true, numericality: {only_integer: true}
   validates :image, presence: true
