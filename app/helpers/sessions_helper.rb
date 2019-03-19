@@ -58,6 +58,7 @@ module SessionsHelper
   end
 
   def your_rating book
-    current_user.ratings.find_by(book_id: book.id).number_rating
+    my_rating = current_user.ratings.find_by book_id: book.id
+    my_rating.present? ? my_rating.number_rating : 0
   end
 end
