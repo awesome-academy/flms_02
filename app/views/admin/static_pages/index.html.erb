@@ -1,3 +1,122 @@
 <% provide :title, t("admin.static_pages.ad") %>
 <%= render "admin/static_pages/layout" %>
+  <content class="col-md-9 content">
+    <div class="col-md-11">
+      <%= render "shared/flash" %>
+        <div class="row">
+          <%= image_tag("admin.png") %>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <i class="fa fa-book fa-5x"></i>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                    <p class="announcement-heading"><%= book_amount %></p>
+                    <p class="announcement-text"><%= t "books" %></p>
+                  </div>
+                </div>
+              </div>
+              <%= link_to admin_books_path do %>
+                <div class="panel-footer announcement-bottom">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <%= t "expand" %>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="panel panel-warning">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <i class="fa fa-user-circle fa-5x"></i>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                    <p class="announcement-heading"><%= author_amount %></p>
+                    <p class="announcement-text"><%= t "authors" %></p>
+                  </div>
+                </div>
+              </div>
+              <%= link_to admin_authors_path do %>
+                <div class="panel-footer announcement-bottom">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <%= t "expand" %>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <i class="fa fa-users fa-5x"></i>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                    <p class="announcement-heading"><%= user_amount %></p>
+                    <p class="announcement-text"><%= t "users" %></p>
+                  </div>
+                </div>
+              </div>
+              <%= link_to admin_users_path do %>
+                <div class="panel-footer announcement-bottom">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <%= t "expand" %>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <i class="fa fa-comments fa-5x"></i>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                    <p class="announcement-heading"><%= processing_amount %></p>
+                    <p class="announcement-text"><%= t "processing" %></p>
+                  </div>
+                </div>
+              </div>
+              <%= link_to admin_requests_path do %>
+                <div class="panel-footer announcement-bottom">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <%= t "expand" %>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div><!-- /.row -->
+    </div>
+  </content>
 </div>
+

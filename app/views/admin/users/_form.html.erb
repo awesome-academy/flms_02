@@ -16,8 +16,10 @@
   <%= f.text_field :phone, class: "form-control" %>
 
   <%= f.label :address %>
-  <%= f.text_field :address, class: "form-control" %>
+  <%= f.text_field :address, class: "form-control" %><br>
 
-  <br>
+  <%= f.label :role %>
+  <%= f.select :role, select_role, class: "form-control" %><br>
+
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
