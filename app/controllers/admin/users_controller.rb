@@ -1,5 +1,5 @@
 class Admin::UsersController < AdminController
-  before_action :load_user, only: %i(edit update)
+  before_action :load_user, only: %i(edit update destroy)
 
   def index
     @users = User.alphabet.paginate page: params[:page],
@@ -30,6 +30,15 @@ class Admin::UsersController < AdminController
     else
       render :edit
     end
+  end
+
+  def destroy
+    if @user.destroy
+      flash[:success] = t "controller.user.destroy.success"
+    else
+      flash[:danger] = t "controller.user.destroy.failed"
+    end
+    redirect_to admin_users_path
   end
 
   private
