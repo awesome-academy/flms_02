@@ -19,6 +19,7 @@ class Book < ApplicationRecord
   validates :price, presence: true, numericality: {only_integer: true}
 
   scope :newest, ->{order created_at: :desc}
+  scope :by_category, ->category_id{where(category_id: category_id)}
 
   accepts_nested_attributes_for :author_books
 

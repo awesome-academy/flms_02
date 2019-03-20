@@ -2,7 +2,12 @@ class Admin::RequestsController < AdminController
   before_action :load_request, only: :update
 
   def index
-    @requests = Request.not_approved.newest.paginate page: params[:page],
+    if params[:request] && params[:request][:status]
+      @requests = Request.by_status params[:request][:status]
+    else
+      @requests = Request.all
+    end
+    @requests = @requests.newest.paginate page: params[:page],
       per_page: Settings.per_page.requests
   end
 

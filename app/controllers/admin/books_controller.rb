@@ -2,7 +2,12 @@ class Admin::BooksController < AdminController
   before_action :load_book, only: %i(edit show update destroy)
 
   def index
-    @books = Book.newest.paginate page: params[:page],
+    if params[:book] && params[:book][:category_id]
+      @books = Book.by_category params[:book][:category_id]
+    else
+      @books = Book.all
+    end
+    @books = @books.newest.paginate page: params[:page],
       per_page: Settings.per_page.books
   end
 

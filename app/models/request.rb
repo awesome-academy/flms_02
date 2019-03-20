@@ -8,6 +8,7 @@ class Request < ApplicationRecord
   validate :to_date_after_from_date
 
   scope :newest, ->{order created_at: :desc}
+  scope :by_status, ->status{where(status: status)}
 
   enum status: {not_approved: 0, approved: 1, reject: 2}
 
