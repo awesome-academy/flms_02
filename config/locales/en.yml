@@ -19,6 +19,7 @@ en:
   edit: "Edit user"
   expand: "Expand"
   from_date: "From"
+  filter: "Filter"
   id: "ID"
   invalid_date: "must be after the from date"
   library: "Library"

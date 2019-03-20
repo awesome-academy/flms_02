@@ -1,0 +1,4 @@
+<%= form_for(:request, url: admin_requests_path, method: :get) do |f| %>
+  <%= f.select :status, Request.statuses.keys.map {|status| [t("request_status.#{status}"), status]} %>
+  <%= f.submit t("filter"), class: "btn btn-success" %>
+<% end %>

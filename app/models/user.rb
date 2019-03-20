@@ -25,6 +25,7 @@ class User < ApplicationRecord
   has_secure_password
 
   scope :alphabet, ->{order name: :asc}
+  scope :by_role, ->role{where(role: role)}
 
   private
 

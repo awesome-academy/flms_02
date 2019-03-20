@@ -2,7 +2,12 @@ class Admin::UsersController < AdminController
   before_action :load_user, only: %i(edit update destroy)
 
   def index
-    @users = User.alphabet.paginate page: params[:page],
+    if params[:user] && params[:user][:role]
+      @users = User.by_role params[:user][:role]
+    else
+      @users = User.all
+    end
+    @users = @users.alphabet.paginate page: params[:page],
       per_page: Settings.per_page.users
   end
 

@@ -1,0 +1,4 @@
+<%= form_for(:user, url: admin_users_path, method: :get) do |f| %>
+  <%= f.select :role, select_role %>
+  <%= f.submit t("filter"), class: "btn btn-success" %>
+<% end %>
