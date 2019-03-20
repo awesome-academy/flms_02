@@ -183,6 +183,9 @@ en:
       create:
         success: "Create user success"
         failed: "Create user failed"
+      destroy:
+        success: "Deleted successfully"
+        failed: "Deleted failed"
       load_fail: "User not found"
       incorrect: "User incorrect"
     session:

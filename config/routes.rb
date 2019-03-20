@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :categories, except: :show
     resources :authors, except: :show
     resources :publishers, except: :show
-    resources :users, except: %i(show destroy)
+    resources :users, except: :show
     resources :books
     resources :requests, only: %i(index update)
   end
