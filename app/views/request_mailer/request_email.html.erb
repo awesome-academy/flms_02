@@ -1,0 +1,7 @@
+<b><%= t "status_mail", status: @request.status %></b>
+<p><i><%= t "name" %> <b><%= @request.book_name %></b></i></p>
+<p><i><%= t "quantity" %> <b><%= @request.quantity %></b></i></p>
+<p><i><%= t "from_date" %> <b><%= l @request.from_date, format: :long %></b></i></p>
+<p><i><%= t "to_date" %> <b><%= l @request.to_date, format: :long %></b></i></p>
+<p><i><%= t "price" %> <b><%= t "product_price", price: @request.price %></b></i></p>
+<p><q><%= t "notice_mail" %></q></p>

@@ -14,6 +14,7 @@ class Request < ApplicationRecord
 
   delegate :name, to: :book, prefix: :book
   delegate :name, to: :user, prefix: :user
+  delegate :email, to: :user, prefix: :user
 
   def total
     day_borrow = (to_date - from_date + Settings.unit_day).to_i

@@ -39,6 +39,7 @@ class Admin::UsersController < AdminController
 
   def destroy
     if @user.destroy
+      RequestMailer.delete_user(@user).deliver_later
       flash[:success] = t "controller.user.destroy.success"
     else
       flash[:danger] = t "controller.user.destroy.failed"
