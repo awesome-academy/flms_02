@@ -2,7 +2,8 @@ class BooksController < ApplicationController
   before_action :load_book, :build_rating, :build_comment, :build_like, :build_request, only: :show
 
   def index
-    @books = Book.newest.paginate page: params[:page],
+    @search = Book.ransack params[:q]
+    @books = @search.result.newest.paginate page: params[:page],
       per_page: Settings.per_page.book
   end
 
