@@ -26,3 +26,8 @@ per_page:
   requests: 5
 unit_price: 0.1
 unit_day: 1
+default_mail: "tranvantu.dev@gmail.com"
+address: "smtp.gmail.com"
+port: 587
+domain: "localhost:3000"
+authentication: "plain"
