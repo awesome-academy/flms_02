@@ -1,0 +1,22 @@
+<% provide :title, @author.name %>
+<div class="container margin-top">
+  <div class="row">
+    <%= render "shared/flash" %>
+    <h3><b><%= @author.name %></b></h3><hr>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <div class="form-group">
+        <i class="glyphicon glyphicon-map-marker"></i>
+        <span class="nav-label"><%= @author.address %></span>
+      </div>
+      <div class="form-group">
+        <i class="glyphicon glyphicon-phone"></i>
+        <span class="nav-label"><%= @author.phone %></span>
+      </div>
+    </div>
+    <div class="col-md-10">
+     <%= render @author.books %>
+    </div>
+  </div>
+</div>
