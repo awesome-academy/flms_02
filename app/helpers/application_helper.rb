@@ -11,4 +11,12 @@ module ApplicationHelper
   def authors
     Author.all.alphabet
   end
+
+  def publishers
+    Publisher.all.alphabet
+  end
+
+  def categories
+    Category.all.alphabet
+  end
 end

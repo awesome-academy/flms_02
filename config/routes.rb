@@ -25,4 +25,6 @@ Rails.application.routes.draw do
   resources :comments, only: %i(create destroy)
   resources :ratings, only: :create
   resources :authors, only: :show
+  resources :publishers, only: :show
+  resources :categories, only: :show
 end

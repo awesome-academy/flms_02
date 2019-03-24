@@ -6,7 +6,7 @@
         <a href="#"><i class="fa fa-cube"></i><%= t "category" %><span class="arrow"></span></a>
       </li>
       <ul class="sub-menu collapse" id="categories">
-        <li><%= t "category" %></li>
+        <%= render categories %>
       </ul>
       <li data-toggle="collapse" data-target="#authors" class="collapsed">
         <a href="#"><i class="fa fa-user-circle"></i><%= t "author" %><span class="arrow"></span></a>
@@ -19,7 +19,7 @@
         <span class="arrow"></span></a>
       </li>
       <ul class="sub-menu collapse" id="publishers">
-        <li><%= t "publisher" %></li>
+        <%= render publishers %>
       </ul>
     </ul>
   </div>
