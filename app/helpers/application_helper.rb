@@ -7,4 +7,8 @@ module ApplicationHelper
       page_title + " | " + base_title
     end
   end
+
+  def authors
+    Author.all.alphabet
+  end
 end
