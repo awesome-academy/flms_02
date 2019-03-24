@@ -1,0 +1,10 @@
+<% provide :title, @category.name %>
+<div class="container margin-top">
+  <div class="row">
+    <%= render "shared/flash" %>
+    <h3><b><%= @category.name %></b></h3><hr>
+  </div>
+  <div class="row">
+    <%= render @category.books %>
+  </div>
+</div>
