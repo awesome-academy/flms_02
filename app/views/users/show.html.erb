@@ -2,21 +2,22 @@
 <div class="container margin-top">
   <div class="row">
     <%= render "shared/flash" %>
-    <h3><b><%= @user.name %></b></h3><hr>
+    <h3><b><%= current_user.name %></b></h3><hr>
+
   </div>
   <div class="row">
     <div class="col-md-2">
       <div class="form-group">
         <i class="glyphicon glyphicon-map-marker"></i>
-        <span class="nav-label"><%= @user.address %></span>
+        <span class="nav-label"><%= current_user.address %></span>
       </div>
       <div class="form-group">
         <i class="glyphicon glyphicon-envelope"></i>
-        <span class="nav-label"><%= @user.email %></span>
+        <span class="nav-label"><%= current_user.email %></span>
       </div>
       <div class="form-group">
         <i class="glyphicon glyphicon-phone"></i>
-        <span class="nav-label"><%= @user.phone %></span>
+        <span class="nav-label"><%= current_user.phone %></span>
       </div>
     </div>
     <div class="col-md-10">
@@ -35,7 +36,7 @@
           </tr>
         </thead>
         <tbody>
-          <%= render requests_newest %>
+          <%= render current_user.requests.newest %>
         </tbody>
       </table>
     </div>

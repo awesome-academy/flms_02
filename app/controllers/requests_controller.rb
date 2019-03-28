@@ -1,5 +1,5 @@
 class RequestsController < ApplicationController
-  before_action :logged_in_user, only: :create
+  before_action :authenticate_user!, only: :create
 
   def create
     @request = current_user.requests.build request_params

@@ -1,5 +1,5 @@
 class RatingsController < ApplicationController
-  before_action :logged_in_user, :update_rating, only: :create
+  before_action :authenticate_user!, :update_rating, only: :create
 
   def create
     @rating = current_user.ratings.build ratings_params
