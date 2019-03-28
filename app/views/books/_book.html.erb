@@ -24,12 +24,12 @@
         <% end %>
       </li>
       <li>
-        <% if logged_in? %>
+        <% if user_signed_in? %>
           <%= link_to book_path(book), "data-tip": like?(book) ? t("unlike") : t("like") do %>
             <i class="fa <%= like?(book) ? "fa-thumbs-down" : "fa-thumbs-up" %>"></i>
           <% end %>
         <% else %>
-          <%= link_to login_path, "data-tip": t("like") do %>
+          <%= link_to new_user_session_path, "data-tip": t("like") do %>
             <i class="fa fa-thumbs-up"></i>
           <% end %>
         <% end %>

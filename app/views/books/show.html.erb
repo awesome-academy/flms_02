@@ -33,7 +33,7 @@
             <% end %>
           </div>
           <p>
-            <% if logged_in? %>
+            <% if user_signed_in? %>
               <% if like? @book %>
                 <%= link_to like_path(book_id: @book.id), method: :delete,
                   class: "btn btn-danger", data: {confirm: t("you_sure")} do %>
@@ -43,7 +43,7 @@
                 <%= render "likes/like" %>
               <% end %>
             <% else %>
-              <%= link_to login_path do %>
+              <%= link_to new_user_session_path do %>
                 <%= render "likes/like" %>
               <% end %>
             <% end %>
