@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   before_save :downcase_email
 
   has_many :likes, dependent: :destroy
@@ -21,8 +25,6 @@ class User < ApplicationRecord
     length: {minimum: Settings.models.user.min_pass}, allow_nil: true
 
   enum role: {user: 0, admin: 1}
-
-  has_secure_password
 
   scope :alphabet, ->{order name: :asc}
   scope :by_role, ->role{where(role: role)}
