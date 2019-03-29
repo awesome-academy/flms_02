@@ -1,12 +1,14 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
   include SessionsHelper
 
-  private
+  protected
 
-  def logged_in_user
-    return if logged_in?
-    flash[:danger] = t "please_login"
-    redirect_to login_path
+  def configure_permitted_parameters
+    added_attrs = [:email, :password, :password_confirmation, :name, :phone, :address]
+    devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
+    devise_parameter_sanitizer.permit :account_update, keys: added_attrs
   end
 end
